@@ -6,24 +6,38 @@ class HomeWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int day=30;
+    String name="Ankita";
+    
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( backgroundColor: Colors.amberAccent,
         centerTitle: true,
-        title: const Text(
-          'Home page',
+        title:  Text(
+          'Home Page',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: Center(
-        child:Container(    child: Text(
-          "Home page 1",
-          style: TextStyle(
+        child:Container ( child: Text(
+          'Welcome to $day days of flutter by $name',
+          style:  TextStyle(
             color: Colors.blue,
-            fontSize: 20.5,
+            fontSize: 12.5, 
+           
             fontWeight: FontWeight.bold,
           ),
         ),
-      ),)
+      ),),
+      drawer: Drawer(
+        
+        child: 
+           DrawerHeader(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+        ),
+        child: Text('Menu', style: TextStyle(color: Colors.white, fontSize: 24)),
+      ),
+       )
     
     );
   }
